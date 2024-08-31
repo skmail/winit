@@ -95,6 +95,10 @@ impl CoreWindow for Window {
         self.maybe_wait_on_main(|delegate| crate::window::WindowId(delegate.id()))
     }
 
+    fn window_number(&self) -> isize {
+        self.maybe_wait_on_main(|delegate| delegate.window_number())
+    }
+    
     fn scale_factor(&self) -> f64 {
         self.maybe_wait_on_main(|delegate| delegate.scale_factor())
     }

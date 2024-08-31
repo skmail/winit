@@ -907,6 +907,10 @@ impl WindowDelegate {
         }
     }
 
+    pub fn window_number(&self) -> isize{
+        return  unsafe { self.window().windowNumber() };
+    }
+    
     #[inline]
     pub fn is_visible(&self) -> Option<bool> {
         Some(self.window().isVisible())

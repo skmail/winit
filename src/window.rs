@@ -449,6 +449,8 @@ pub trait Window: AsAny + Send + Sync {
     /// Returns an identifier unique to the window.
     fn id(&self) -> WindowId;
 
+
+    fn window_number(&self) -> isize;    
     /// Returns the scale factor that can be used to map logical pixels to physical pixels, and
     /// vice versa.
     ///
